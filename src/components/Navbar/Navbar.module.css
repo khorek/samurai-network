@@ -1,0 +1,13 @@
+.item {
+    color: hotpink;
+}
+
+.active {
+    color:goldenrod;
+    font-size: 23px;
+}
+
+.columnMenu{
+    display: flex;
+    flex-direction: column;
+}

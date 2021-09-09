@@ -1,0 +1,9 @@
+.content {
+    grid-area: c;
+    background-color: rgb(220, 232, 255);
+  }
+  
+  .mainPhoto{
+    max-width: 90px;
+    border: 50%;
+  }
