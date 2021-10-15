@@ -1,11 +1,12 @@
 import React from 'react';
 import { Field } from 'redux-form';
 import styles from './FormsControls.module.css';
+import { InputGroup, FormControl, Button } from 'react-bootstrap';
 
-export const FormControl = ({ input, meta, children }) => {
+export const CheckFormControl = ({ input, meta, children }) => {
     const hasError = meta.touched && meta.error;
     return (
-        <div className={styles.formControl + ' ' + (hasError ? styles.error : '')}>
+        <div className={' ' + (hasError ? styles.error : '')}>
             <div>
                 {children}
             </div>
@@ -17,7 +18,14 @@ export const FormControl = ({ input, meta, children }) => {
 
 export const Textarea = (props) => {
     const { input, meta, child, ...restProps } = props;
-    return <FormControl {...props}><textarea {...input} {...restProps} /> </FormControl>
+    return <CheckFormControl {...props}>
+        {/* <textarea {...input} {...restProps} /> */}
+        <InputGroup>
+            <InputGroup.Text>Say something...</InputGroup.Text>
+            <FormControl as="textarea" aria-label="With textarea"  {...input} />
+        </InputGroup>
+
+    </CheckFormControl>
 }
 
 export const Input = (props) => {

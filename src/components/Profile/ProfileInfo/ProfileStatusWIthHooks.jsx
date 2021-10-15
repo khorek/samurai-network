@@ -1,5 +1,7 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import { useEffect } from 'react';
+import { InputGroup , FormControl } from 'react-bootstrap';
+
 
 const ProfileStatusWithHooks = (props) => {
 
@@ -30,7 +32,7 @@ const ProfileStatusWithHooks = (props) => {
         <div>
             {!editMode &&
                 <div>
-                    <span style={{border: '1px solid red', width: '250px', padding: '2px'}} onDoubleClick={activateEditMode}>{props.status || '----'}</span>
+                    <span style={{ border: '1px solid red', width: '250px', padding: '2px' }} onDoubleClick={activateEditMode}>{props.status || '----'}</span>
                 </div>
             }
             {editMode &&

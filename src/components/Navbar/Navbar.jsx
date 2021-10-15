@@ -11,7 +11,6 @@ export const Navbar = () => {
           <NavLink to='/profile' className='navbar-brand mb-0 h1'>Profile</NavLink>
           <NavLink to='/dialogs' className="navbar-brand mb-0 h1">Dialogs</NavLink>
           <NavLink to='/users' className="navbar-brand mb-0 h1">Users</NavLink>
-          <NavLink to='/sidebar' className="navbar-brand mb-0 h1">Sidebar</NavLink>
         </div>
       </nav>
     </>

@@ -4,7 +4,6 @@ import store from './redux/redux-store';
 // import { BrowserRouter, Switch } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import { BrowserRouter, Switch, Route, withRouter } from 'react-router-dom';
-import SidebarContainer from './components/Sidebar/SidebarContainer';
 import UsersContainer from './components/Users/UsersContainer';
 import ProfileContainer from './components/Profile/ProfileContainer';
 import HeaderContainer from './components/Header/HeaderContainer'
@@ -21,8 +20,6 @@ class App extends React.Component {
 
   catchAllUnhadleErrors = (reason, promise) => {
     alert('Some Error occured');
-    // console.log('Reason: ', reason);
-    // console.error(promiseRejectionEvent);
   }
 
   componentDidMount() {
@@ -55,8 +52,7 @@ class App extends React.Component {
               <Route path='/profile/:userId?' render={() => <ProfileContainer />} />
               <Route path='/users' render={() => <UsersContainer />} />
               <Route path='/login' render={() => <LoginPage />} />
-              <Route path='/sidebar' render={() => <SidebarContainer />} />
-              <Route path="*" render={() => <div>404. Not Found</div> } />
+              <Route path="*" render={() => <div>404. Not Found</div>} />
             </Switch>
           </div>
         </div>

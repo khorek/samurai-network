@@ -4,6 +4,7 @@ import Preloader from '../../common/Preloader/Preloader';
 import ProfileStatusWithHooks from './ProfileStatusWIthHooks';
 import userPhoto from '../../../assets/images/ava.jpg';
 import ProfileDataForm from './ProfileDataForm';
+import { Button } from 'react-bootstrap';
 
 const ProfileInfo = (props) => {
   const [editMode, setEditMode] = useState(false);
@@ -44,7 +45,7 @@ const ProfileInfo = (props) => {
 const ProfileData = ({ profile, isOwner, goToEditMode }) => {
   return (
     <div>
-      {isOwner && <div><button onClick={goToEditMode}>Edit</button></div>}
+      {isOwner && <div><Button onClick={goToEditMode} variant="warning">Edit</Button ></div>}
       <div>
         <img src={profile.data.photos.small} alt='Alt' />
       </div>

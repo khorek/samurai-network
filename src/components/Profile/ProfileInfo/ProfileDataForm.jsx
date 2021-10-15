@@ -3,13 +3,13 @@ import { reduxForm } from 'redux-form';
 import { createField, Input, Textarea } from '../../common/FormsControls/FormsControls';
 import s from './Profile.module.css';
 import style from './../../common/FormsControls/FormsControls.module.css';
-
+import { Button } from 'react-bootstrap';
 
 const ProfileDataForm = ({ handleSubmit, profile, error }) => {
     console.log(profile);
     return (
         <form onSubmit={handleSubmit}>
-            <div><button>Save</button></div>
+            <div> <Button variant="warning">Save</Button ></div>
 
             {error && <div className={style.formSummaryError}>
                 {error}
