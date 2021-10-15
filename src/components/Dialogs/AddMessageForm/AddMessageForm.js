@@ -4,7 +4,6 @@ import { Textarea } from '../../common/FormsControls/FormsControls';
 import { required } from '../../../utils/validators/validators';
 import { Button } from 'react-bootstrap';
 
-
 const maxLengthCreator50 = maxLengthCreator(50);
 
 export const AddMessageForm = (props) => {

@@ -4,7 +4,6 @@ import userPhoto from '../../assets/images/ava.jpg'
 import { NavLink } from 'react-router-dom';
 import { Button } from 'react-bootstrap';
 
-
 const User = ({ user, followingInProgress, unfollow, follow }) => {
     return <div>
         <span>

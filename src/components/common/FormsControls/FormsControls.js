@@ -18,7 +18,6 @@ export const CheckFormControl = ({ input, meta, children }) => {
 export const Textarea = (props) => {
     const { input, meta, child, ...restProps } = props;
     return <CheckFormControl {...props}>
-        {/* <textarea {...input} {...restProps} /> */}
         <InputGroup>
             <InputGroup.Text>Say something...</InputGroup.Text>
             <FormControl as="textarea" aria-label="With textarea"  {...input} />

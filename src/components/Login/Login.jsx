@@ -8,7 +8,6 @@ import { Redirect } from 'react-router-dom';
 import style from './../common/FormsControls/FormsControls.module.css';
 import { Button } from 'react-bootstrap';
 
-
 const LoginForm = ({ handleSubmit, error, captchaUrl }) => {
     return (
         <form>
@@ -29,8 +28,6 @@ const LoginForm = ({ handleSubmit, error, captchaUrl }) => {
 const LoginReduxForm = reduxForm({ form: 'login' })(LoginForm)
 
 const Login = (props) => {
-    console.log(props);
-
     let onSubmit = (formData) => {
         props.login(formData.email, formData.password, formData.rememberMe, formData.captcha)
     }

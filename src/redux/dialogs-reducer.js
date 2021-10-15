@@ -9,8 +9,8 @@ let initialState = {
     ],
     messages: [
         {id: 1, message: 'hello 1'},
-        {id: 2, message: 'My 2'},
-        {id: 3, message: 'Name 3'},
+        {id: 2, message: 'My some post 2'},
+        {id: 3, message: 'Life is tough'},
         {id: 4, message: 'Jimbo Jumbo 4'}
     ]
 }

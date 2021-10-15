@@ -1,7 +1,6 @@
 import './App.css';
 import { Navbar } from './components/Navbar/Navbar';
 import store from './redux/redux-store';
-// import { BrowserRouter, Switch } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import { BrowserRouter, Switch, Route, withRouter } from 'react-router-dom';
 import UsersContainer from './components/Users/UsersContainer';
