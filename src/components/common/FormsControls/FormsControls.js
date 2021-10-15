@@ -15,7 +15,6 @@ export const CheckFormControl = ({ input, meta, children }) => {
     )
 }
 
-
 export const Textarea = (props) => {
     const { input, meta, child, ...restProps } = props;
     return <CheckFormControl {...props}>
@@ -30,7 +29,7 @@ export const Textarea = (props) => {
 
 export const Input = (props) => {
     const { input, meta, child, ...restProps } = props;
-    return <FormControl {...props}><input {...input} {...restProps} /> </FormControl>
+    return <CheckFormControl {...props}><input {...input} {...restProps} /> </CheckFormControl>
 }
 
 export const createField = (placeholder, name, validators, component, props = {}, text = '') => (

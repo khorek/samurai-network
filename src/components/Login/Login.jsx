@@ -6,13 +6,12 @@ import { createField, Input } from '../common/FormsControls/FormsControls';
 import { login } from '../../redux/auth-reducer';
 import { Redirect } from 'react-router-dom';
 import style from './../common/FormsControls/FormsControls.module.css';
+import { Button } from 'react-bootstrap';
+
 
 const LoginForm = ({ handleSubmit, error, captchaUrl }) => {
-    console.log(captchaUrl);
-    console.log(error);
-    console.log(handleSubmit);
     return (
-        <form onSubmit={handleSubmit}>
+        <form>
             {createField('Email', 'email', [required], Input)}
             {createField('Password', 'password', [required], Input, { type: 'password' })}
             {createField(null, 'rememberMe', [], Input, { type: 'checkbox' }, 'remember Me')}
@@ -21,7 +20,7 @@ const LoginForm = ({ handleSubmit, error, captchaUrl }) => {
             {captchaUrl && createField('Symbols from image', 'captcha', [required], Input, {}) }
 
             {error && <div className={style.formSummaryError}>{error}</div>}
-            <div><button>Login</button></div>
+            <div><Button variant="info" onClick={handleSubmit}>Login</Button></div>
 
         </form>
     )

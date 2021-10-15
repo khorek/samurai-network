@@ -2,6 +2,8 @@ import React from 'react';
 import styles from './users.module.css';
 import userPhoto from '../../assets/images/ava.jpg'
 import { NavLink } from 'react-router-dom';
+import { Button } from 'react-bootstrap';
+
 
 const User = ({ user, followingInProgress, unfollow, follow }) => {
     return <div>
@@ -13,13 +15,13 @@ const User = ({ user, followingInProgress, unfollow, follow }) => {
             </div>
             <div>
                 {user.followed ?
-                    <button disabled={followingInProgress.some(id => id === user.id)} onClick={() => {
+                    <Button variant="secondary" disabled={followingInProgress.some(id => id === user.id)} onClick={() => {
                         unfollow(user.id)
-                    }}>Unfollow</button>
+                    }}>Unfollow</Button>
 
-                    : <button disabled={followingInProgress.some(id => id === user.id)} onClick={() => {
+                    : <Button variant="success" disabled={followingInProgress.some(id => id === user.id)} onClick={() => {
                         follow(user.id)
-                    }}>Follow</button>
+                    }}>Follow</Button>
                 }
             </div>
         </span>
