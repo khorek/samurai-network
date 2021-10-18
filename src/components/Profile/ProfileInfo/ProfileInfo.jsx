@@ -30,14 +30,31 @@ const ProfileInfo = (props) => {
 
   return (
     <div className={s.content}>
-      <div>
+      {/* <div>
         <img src={props.profile.large || userPhoto} alt='userPhoto' className={s.mainPhoto} />
         {props.isOwner && <input type={'file'} onChange={onMainPhotoSelected} />}
-      </div>
+      </div> */}
       {editMode
-        ? <ProfileDataForm initialValues={props.profile} profile={props.profile} onSubmit={onSubmit} />
-        : <ProfileData goToEditMode={() => { setEditMode(true) }} profile={props.profile} isOwner={props.isOwner} />}
-      <div>Status:<ProfileStatusWithHooks status={props.status} updateStatus={props.updateStatus} /></div>
+        ? <div>
+            {/* <div>Status:<ProfileStatusWithHooks status={props.status} updateStatus={props.updateStatus} /></div> */}
+            <ProfileDataForm initialValues={props.profile} profile={props.profile} onSubmit={onSubmit} />
+            {/* <div>
+              <img src={props.profile.large || userPhoto} alt='userPhoto' className={s.mainPhoto} />
+              {props.isOwner && <input type={'file'} onChange={onMainPhotoSelected} />}
+            </div> */}
+
+          </div>
+        : <div>
+            {/* <div>Status:<ProfileStatusWithHooks status={props.status} updateStatus={props.updateStatus} /></div> */}
+            <ProfileData goToEditMode={() => { setEditMode(true) }} profile={props.profile} isOwner={props.isOwner} />
+            <div>Status:<ProfileStatusWithHooks status={props.status} updateStatus={props.updateStatus} /></div>
+            <div>
+              {/* <img src={props.profile.large || userPhoto} alt='userPhoto' className={s.mainPhoto} /> */}
+              {props.isOwner && <input type={'file'} onChange={onMainPhotoSelected} />}
+            </div>
+
+          </div>
+          }
     </div>
   )
 }

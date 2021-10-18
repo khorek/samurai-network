@@ -6,7 +6,6 @@ import { maxLengthCreator, required } from '../../../utils/validators/validators
 import { Textarea } from '../../common/FormsControls/FormsControls';
 import { InputGroup, FormControl, Button } from 'react-bootstrap';
 
-
 const MyPosts = React.memo(props => {
   let postsElements = props.posts.map(el => <Post message={el.message} likesCount={el.likesCount} id={el.id} />);
   let onAddPost = (values) => {
