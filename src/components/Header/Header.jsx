@@ -4,8 +4,6 @@ import { NavLink } from 'react-router-dom';
 import { Button } from 'react-bootstrap';
 
 const Header = (props) => {
-    console.log('header props', props);
-
     return (
         <nav className='navbar navbar-light bg-light'>
             <div className="container-fluid">
